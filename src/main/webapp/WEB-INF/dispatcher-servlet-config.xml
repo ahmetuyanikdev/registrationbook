@@ -1,6 +1,5 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
@@ -14,6 +13,16 @@
             <value>.jsp</value>
         </property>
     </bean>
-    <!--
-    <bean class="com.source.controller.HomePageController"/>-->
+
+    <bean class="com.source.controller.HomePageController"/>
+    <bean class="com.source.controller.RegistrationController"/>
+    <bean class="com.source.controller.ListingController"/>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.h2.Driver"/>
+        <property name="url" value="jdbc:h2:mem:db"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+    </bean>
+
 </beans>
