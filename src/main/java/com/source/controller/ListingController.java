@@ -16,10 +16,10 @@ public class ListingController {
 
     private PersonService personService;
 
-
     @RequestMapping(method = RequestMethod.GET)
     public String get(ModelMap modelMap){
         modelMap.addAttribute("message","Listing page");
+        modelMap.addAttribute("messageFooter","This is sample footer");
         List<Person> personList = personService.getAllPeople();
         modelMap.addAttribute("personList",personList);
         return "listing";

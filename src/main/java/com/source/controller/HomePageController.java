@@ -12,6 +12,7 @@ public class HomePageController {
     @RequestMapping(method = RequestMethod.GET)
     public String get(ModelMap modelMap){
         modelMap.addAttribute("message","Welcome Registration App");
+        modelMap.addAttribute("messageFooter","This is sample footer");
         return "home";
     }
 }

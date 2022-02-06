@@ -18,6 +18,7 @@ public class RegistrationController {
     @RequestMapping(method = RequestMethod.GET)
     public String get(ModelMap modelMap){
         modelMap.addAttribute("message","Registration page");
+        modelMap.addAttribute("messageFooter","This is sample footer");
         modelMap.addAttribute("person",new RegistrationForm());
         return "registration";
     }
