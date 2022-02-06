@@ -24,7 +24,7 @@ public class RegistrationController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String post(@ModelAttribute("person") RegistrationForm registrationForm){
+    public String post(@ModelAttribute("person") RegistrationForm registrationForm,ModelMap modelMap){
         final Person person = new Person();
         person.setFirstName(registrationForm.getFirstName());
         person.setLastName(registrationForm.getLastName());

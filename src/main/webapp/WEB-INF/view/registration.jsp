@@ -23,7 +23,7 @@
                     <td><form:input path="phone" class="form-control"/></td>
                 </tr>
                 <tr>
-                    <td><form:label path="address">address</form:label></td>
+                    <td><form:label path="address">Address</form:label></td>
                     <td><form:input path="address" class="form-control"/></td>
                 </tr>
                 <tr>
