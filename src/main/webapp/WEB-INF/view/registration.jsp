@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page isELIgnored="false" %>
 <jsp:include page="header.jsp"/>
 <html>
     <body>
@@ -27,11 +28,26 @@
                     <td><form:input path="address" class="form-control"/></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="Save" class="btn btn-primary"/></td>
+                    <td><input type="submit" value="Save" class="btn btn-primary"/>
+                    </td>
                 </tr>
             </table>
         </form:form>
         </div>
     </body>
+    <tfoot>
+        <tr>
+            <td colspan="5">
+            <c:choose>
+                <c:when test="${statusMessage=='Saved'}">
+                    <div class="col-md-12"><h2><label class="label label-success">${statusMessage}</label></h2></div>
+                </c:when>
+                <c:otherwise>
+                   <div class="col-md-12"><h2><label class="label label-error">${statusMessage}</label></h2></div>
+                </c:otherwise>
+            </c:choose>
+            </td>
+        <tr>
+    </tfoot>
 </html>
 <jsp:include page="footer.jsp"/>

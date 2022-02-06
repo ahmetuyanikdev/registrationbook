@@ -3,6 +3,7 @@ package com.source.controller;
 import com.source.form.RegistrationForm;
 import com.source.model.Person;
 import com.source.service.PersonService;
+import org.hibernate.HibernateException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -31,7 +32,14 @@ public class RegistrationController {
         person.setAddress(registrationForm.getLastName());
         person.setBloodGroup(registrationForm.getBloodGroup());
         person.setPhone(registrationForm.getPhone());
-        personService.save(person);
+        try{
+            personService.save(person);
+            modelMap.addAttribute("statusMessage","Saved");
+            modelMap.addAttribute("person",new RegistrationForm());
+        }catch (HibernateException ex){
+            modelMap.addAttribute("statusMessage","Person could not be saved, Reason : "+ex.getMessage());
+            modelMap.addAttribute("person",new RegistrationForm());
+        }
         return "registration";
     }
 

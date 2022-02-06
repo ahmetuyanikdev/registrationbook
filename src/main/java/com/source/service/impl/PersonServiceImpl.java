@@ -3,6 +3,7 @@ package com.source.service.impl;
 import com.source.model.Person;
 import com.source.service.PersonService;
 import com.source.util.HibernateUtil;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
