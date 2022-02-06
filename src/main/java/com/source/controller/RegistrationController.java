@@ -29,7 +29,7 @@ public class RegistrationController {
         final Person person = new Person();
         person.setFirstName(registrationForm.getFirstName());
         person.setLastName(registrationForm.getLastName());
-        person.setAddress(registrationForm.getLastName());
+        person.setAddress(registrationForm.getAddress());
         person.setBloodGroup(registrationForm.getBloodGroup());
         person.setPhone(registrationForm.getPhone());
         try{
