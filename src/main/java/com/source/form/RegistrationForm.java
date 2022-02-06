@@ -1,27 +1,13 @@
-package com.source.model;
+package com.source.form;
 
-import javax.persistence.*;
+public class RegistrationForm {
 
-@Entity
-@Table(name = "person")
-public class Person {
-
-    private long id;
     private String firstName;
     private String lastName;
     private String bloodGroup;
     private String phone;
     private String address;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public long getId() {
-        return id;
-    }
-    public void setId(long id) {
-        this.id = id;
-    }
-    @Column(nullable = false)
     public String getFirstName() {
         return firstName;
     }
@@ -30,7 +16,6 @@ public class Person {
         this.firstName = firstName;
     }
 
-    @Column(nullable = false)
     public String getLastName() {
         return lastName;
     }
@@ -39,7 +24,6 @@ public class Person {
         this.lastName = lastName;
     }
 
-    @Column(nullable = false)
     public String getBloodGroup() {
         return bloodGroup;
     }
@@ -48,7 +32,6 @@ public class Person {
         this.bloodGroup = bloodGroup;
     }
 
-    @Column(nullable = false)
     public String getPhone() {
         return phone;
     }
@@ -57,7 +40,6 @@ public class Person {
         this.phone = phone;
     }
 
-    @Column(nullable = false)
     public String getAddress() {
         return address;
     }
