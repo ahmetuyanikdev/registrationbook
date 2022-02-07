@@ -1,0 +1,6 @@
+In order to run this application,
+following commands must be proceed in same directory with pom.xml file
+
+    1. mvn clean install -> to compile and package project
+
+    2. jetty:run -> to start project locally http://localhost:8080/ on jetty server
