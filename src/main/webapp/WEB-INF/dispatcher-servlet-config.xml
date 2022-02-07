@@ -21,6 +21,7 @@
     </bean>
 
     <bean class="com.source.controller.HomePageController"/>
+
     <bean class="com.source.controller.ListingController">
         <property name="personService" ref="personService"/>
     </bean>

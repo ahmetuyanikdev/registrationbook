@@ -18,10 +18,17 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <spring.version>5.3.14</spring.version>
-    <jackson.version>1.9.10</jackson.version>
+    <hibernate.version>5.3.7.Final</hibernate.version>
+    <jaxb-core.version>2.3.0.1</jaxb-core.version>
+    <jaxb-api.version>2.3.1</jaxb-api.version>
+    <javassist.version>3.25.0-GA</javassist.version>
+    <javax.servlet.jstl.version>1.2</javax.servlet.jstl.version>
+    <javax.servlet.api.version>2.5</javax.servlet.api.version>
+    <jsp-api.version>2.1</jsp-api.version>
+    <taglibs.version>1.1.2</taglibs.version>
+    <h2.version>1.4.200</h2.version>
     <jetty.version>10.0.0.beta2</jetty.version>
-    <slf4j-version>1.7.5</slf4j-version>
-    <logback-version>1.2.0</logback-version>
+    <log4j-version>2.17.1</log4j-version>
   </properties>
 
   <dependencies>
@@ -58,64 +65,66 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>5.3.7.Final</version>
+      <version>${hibernate.version}</version>
     </dependency>
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-core</artifactId>
-      <version>2.3.0.1</version>
+      <version>${jaxb-core.version}</version>
     </dependency>
 
     <dependency>
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
-      <version>2.3.1</version>
+      <version>${jaxb-api.version}</version>
     </dependency>
 
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
-      <version>2.3.1</version>
+      <version>${jaxb-api.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.javassist</groupId>
       <artifactId>javassist</artifactId>
-      <version>3.25.0-GA</version>
+      <version>${javassist.version}</version>
     </dependency>
 
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
-      <version>1.2</version>
+      <version>${javax.servlet.jstl.version}</version>
       <scope>runtime</scope>
     </dependency>
 
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
-      <version>2.5</version>
+      <version>${javax.servlet.api.version}</version>
     </dependency>
 
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
-      <version>2.1</version>
+      <version>${jsp-api.version}</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>taglibs</groupId>
       <artifactId>standard</artifactId>
-      <version>1.1.2</version>
+      <version>${taglibs.version}</version>
       <scope>runtime</scope>
     </dependency>
+
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
-      <version>1.4.200</version>
+      <version>${h2.version}</version>
       <scope>runtime</scope>
     </dependency>
+
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j</artifactId>

@@ -5,7 +5,7 @@
     <body>
         <div class="col-md-12">
             <form:form method="POST" 
-                action="/registration" modelAttribute="person">
+                action="/registration" modelAttribute="person" accept-charset="utf-8">
              <table class="table" style="width:50%;">
                 <tr>
                     <td><form:label path="firstName">First Name</form:label></td>
