@@ -35,7 +35,7 @@ public class RegistrationController {
         try{
             personService.save(person);
             modelMap.addAttribute("statusMessage","Saved");
-            modelMap.addAttribute("person",new RegistrationForm());
+            get(modelMap);
         }catch (HibernateException ex){
             modelMap.addAttribute("statusMessage","Person could not be saved, Reason : "+ex.getMessage());
             modelMap.addAttribute("person",new RegistrationForm());
