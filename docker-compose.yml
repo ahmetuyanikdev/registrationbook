@@ -1,0 +1,10 @@
+version: '2'
+services:
+  worker:
+    image: maven:3.8.1-openjdk-11-slim
+    volumes:
+      - .:/apps
+    working_dir: /apps
+    ports:
+      - "8080:8080"
+    command: mvn clean package jetty:run
